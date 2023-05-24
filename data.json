@@ -1,0 +1,31 @@
+[
+  [
+    ["You", "Nǐ", "你"],
+    ["Good", "Hǎo", "好"],
+    ["One", "Yī", "一"],
+    ["Five", "Wǔ", "五"],
+    ["Eight", "Bā", "八"],
+    ["Big", "Dà", "大"],
+    ["Not", "Bù", "不"],
+    ["Mouth", "Kǒu", "口"],
+    ["White", "Bái", "白"],
+    ["Female", "Nǚ", "女"],
+    ["Horse", "Mǎ", "马"]
+  ],
+  [
+    ["Busy", "Máng", "忙"],
+    ["Particle at the end of question", "Ma", "吗"],
+    ["Very", "Hěn", "很"],
+    ["Chinese (language)", "Hànyǔ", "汉语"],
+    ["Hard", "Nán", "难"],
+    ["Too", "Tài", "太"],
+    ["Dad", "Bàba", "爸爸"],
+    ["Mom", "Māmā", "妈妈"],
+    ["He", "Tā", "他"],
+    ["She", "Tā", "她"],
+    ["Male", "Nán", "男"],
+    ["Elder brother", "Gēge", "哥哥"],
+    ["Younger brother", "Dìdi", "弟弟"],
+    ["Younger sister", "Mèimei", "妹妹"]
+  ]
+]

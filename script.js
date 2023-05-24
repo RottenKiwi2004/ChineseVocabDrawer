@@ -67,8 +67,8 @@ function clearCanvas() {
 window.addEventListener("resize", adjustCanvasSize);
 window.addEventListener("keypress", (e) => {
   switch (e.key) {
-    case "C":
-    case "c":
+    case "E":
+    case "e":
       clearCanvas();
       break;
     default:
