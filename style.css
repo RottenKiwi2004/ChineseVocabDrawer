@@ -36,4 +36,12 @@ body {
 .gui > button {
     padding: 10px;
     font-weight: 900;
+    font-size: 20px;
+}
+
+
+.chapters > input[type=checkbox] {
+    height: 20px;
+    width: 20px;
+    margin: 20px;
 }

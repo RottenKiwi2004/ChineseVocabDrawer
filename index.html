@@ -2,16 +2,30 @@
 <html>
   <head>
     <title>Drawing Canvas</title>
-    <link rel="stylesheet" href="style.css">    
+    <link rel="stylesheet" href="/css">    
+    <script src="/js" defer></script>
 </head>
   <body>
     <div class="container">
         <canvas id="canvas"></canvas>
         <div class="gui">
-            <label for="strokeSize">Stroke Size: </label><input id="strokeSize" type="range" min="5" max="15" value="2" onchange="changeStrokeSize(this.value)">
+            <h2>Vocab: </h5><p id="vocab"></p>
+            <h2>Pinyin: </h5><p id="pinyin"></p>
+            <h2>Chinese: </h5><p id="chinese"></p>
+            <h3>Stroke Size:</h3>
+            <input id="strokeSize" type="range" min="5" max="15" value="10" onchange="changeStrokeSize(this.value)">
             <button onclick="clearCanvas()">Clear Canvas (E)</button>
+            <button onclick="togglePinyin()">Toggle Pinyin (S)</button>
+            <button onclick="toggleChinese()">Toggle Chinese (D)</button>
+            <button onclick="nextWord()">Next Word (F)</button>
+            <h3>Chapters</h3>
+            <div class="chapters">
+              <input type="checkbox" name="ch1" width="20px" onchange="encodeChapters(1, this.checked)"><label for="ch1">1</label>
+              <input type="checkbox" name="ch2" width="20px" onchange="encodeChapters(2, this.checked)"><label for="ch2">2</label>
+              <input type="checkbox" name="ch3" width="20px" onchange="encodeChapters(3, this.checked)"><label for="ch3">3</label>
+              <input type="checkbox" name="ch4" width="20px" onchange="encodeChapters(4, this.checked)"><label for="ch4">4</label>
+            </div>
         </div>
     </div>
-    <script src="script.js"></script>
   </body>
 </html>
