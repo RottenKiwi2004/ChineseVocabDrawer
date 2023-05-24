@@ -6,7 +6,7 @@ const context = canvas.getContext("2d");
 
 // Request code for vocab
 let code = 0;
-const totalChapter = 2;
+const totalChapter = 4;
 let currentWord, currentPinyin, currentChinese;
 let showPinyin = false,
   showChinese = false;
@@ -25,15 +25,24 @@ canvas.addEventListener("mousedown", startDrawing);
 canvas.addEventListener("mousemove", draw);
 canvas.addEventListener("mouseup", stopDrawing);
 canvas.addEventListener("mouseout", stopDrawing);
+canvas.addEventListener("pointerdown", startDrawing);
+canvas.addEventListener("pointermove", draw);
+canvas.addEventListener("pointerup", stopDrawing);
+canvas.addEventListener("pointerout", stopDrawing);
+
+// Event listeners for touch events
+canvas.addEventListener("touchstart", handleTouchStart, { passive: false });
+canvas.addEventListener("touchmove", handleTouchMove, { passive: false });
+canvas.addEventListener("touchend", stopDrawing);
 
 function startDrawing(event) {
   isDrawing = true;
-  currentX = event.clientX - canvas.offsetLeft;
-  currentY = event.clientY - canvas.offsetTop;
+  setPosition(event);
 }
 
 function draw(event) {
   if (!isDrawing) return;
+  event.preventDefault();
   const x = event.clientX - canvas.offsetLeft;
   const y = event.clientY - canvas.offsetTop;
 
@@ -41,11 +50,33 @@ function draw(event) {
   context.moveTo(currentX, currentY);
   context.lineTo(x, y);
   context.lineWidth = strokeSize; // Set the stroke size
+  context.lineCap = "round";
   context.strokeStyle = "#6f7f9a";
   context.stroke();
 
-  currentX = x;
-  currentY = y;
+  setPosition(event);
+}
+
+// Function to set the current position
+function setPosition(event) {
+  const { clientX, clientY } = getCoordinates(event);
+  currentX = clientX - canvas.offsetLeft;
+  currentY = clientY - canvas.offsetTop;
+}
+
+// Function to get the coordinates based on event type
+function getCoordinates(event) {
+  let clientX, clientY;
+
+  if (event.touches) {
+    clientX = event.touches[0].clientX;
+    clientY = event.touches[0].clientY;
+  } else {
+    clientX = event.clientX;
+    clientY = event.clientY;
+  }
+
+  return { clientX, clientY };
 }
 
 function stopDrawing() {
@@ -129,3 +160,13 @@ window.addEventListener("keypress", (e) => {
       return;
   }
 });
+
+// Function to handle touchstart event and prevent default touch behavior
+function handleTouchStart(event) {
+  event.preventDefault();
+}
+
+// Function to handle touchmove event and prevent default touch behavior
+function handleTouchMove(event) {
+  event.preventDefault();
+}
