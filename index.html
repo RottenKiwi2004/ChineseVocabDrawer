@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Drawing Canvas</title>
+    <link rel="stylesheet" href="style.css">    
+</head>
+  <body>
+    <div class="container">
+        <canvas id="canvas"></canvas>
+        <div class="gui">
+            <label for="strokeSize">Stroke Size: </label><input id="strokeSize" type="range" min="5" max="15" value="2" onchange="changeStrokeSize(this.value)">
+            <button onclick="clearCanvas()">Clear Canvas (C)</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

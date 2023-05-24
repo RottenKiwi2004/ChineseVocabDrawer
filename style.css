@@ -1,0 +1,39 @@
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+:root {
+    --bg-colour: #1c1e22;
+    --bg-canvas: #21262e;
+}
+
+body {
+    background: var(--bg-colour);
+}
+
+#canvas {
+    border: 3px solid var(--bg-canvas);
+}
+  
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.gui {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    font-size: 40px;
+    color: #fff;
+}
+
+.gui > button {
+    padding: 10px;
+    font-weight: 900;
+}
