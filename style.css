@@ -25,26 +25,29 @@ body {
     width: 100vw;
     justify-content: flex-start;
     align-items: flex-start;
+    flex-direction: row-reverse;
 }
 
 .gui {
-    padding: 20px;
+    padding: 1.5vh;
     display: flex;
     flex-direction: column;
-    gap: 20px; 
+    gap: 1.5vh; 
     font-size: 40px;
     color: #fff;
+    height: 100vh;
+    width: inherit;
 }
 
 .gui > button {
     padding: 10px;
     font-weight: 900;
-    font-size: 20px;
+    font-size: 1.5vh;
 }
 
 
 .chapters > input[type=checkbox] {
     height: 20px;
     width: 20px;
-    margin: 20px;
+    margin: 1.5vh;
 }

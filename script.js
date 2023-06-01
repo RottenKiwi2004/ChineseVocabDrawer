@@ -5,8 +5,8 @@ const canvas = document.getElementById("canvas");
 const context = canvas.getContext("2d");
 
 // Request code for vocab
-let code = 0;
-const totalChapter = 4;
+const totalChapter = 6;
+let code = (1 << totalChapter) - 1;
 let currentWord, currentPinyin, currentChinese;
 let showPinyin = false,
   showChinese = false;
@@ -106,6 +106,7 @@ function encodeChapters(chapter, state) {
 }
 
 function nextWord() {
+  console.log(code);
   fetch(`/vocab?code=${code}`)
     .then((res) => res.json())
     .then((data) => {

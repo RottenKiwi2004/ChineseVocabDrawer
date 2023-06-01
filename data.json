@@ -69,5 +69,41 @@
     ["Goodbye", "Zàijiàn", "再见"],
     ["Sorry", "Duìbùqǐ", "对不起"],
     ["It doesn't matter", "Méiguānxì", "没关系"]
+  ],
+  [
+    ["This", "Zhè", "这"],
+    ["To be", "Shì", "是"],
+    ["Teacher", "Lǎoshī", "老师"],
+    ["You (honorific)", "Nín", "您"],
+    ["Please", "Qǐng", "请"],
+    ["Enter", "Jìn", "进"],
+    ["Sit", "Zuò", "坐"],
+    ["Drink", "Hē", "喝"],
+    ["Thank you", "Xièxiè", "谢谢"],
+    ["You're welcome", "Bù kèqì", "不客气"],
+    ["Polite", "Kèqì", "客气"],
+    ["Job / To work", "Gōngzuò", "工作"],
+    ["Health / Body", "Shēntǐ", "身体"],
+    ["Body", "Shēn", "身"],
+    ["Ten", "Shí", "十"],
+    ["Sun / Day", "Rì", "日"]
+  ],
+  [
+    ["Excuse me", "Qǐngwèn", "请问"],
+    ["To ask / To inquire", "Wèn", "问"],
+    ["Your (honorable) family name", "Guìxìng", "贵姓"],
+    ["Family name", "Xìng", "姓"],
+    ["To call / To name", "叫", "叫"],
+    ["Name", "Míngzì", "名字"],
+    ["Where", "Nǎ", "哪"],
+    ["Country", "Guó", "国"],
+    ["People", "Rén", "人"],
+    ["To know", "Rènshí", "认识"],
+    ["Glad / Happy / Cheerful", "Gāoxìng", "高兴"],
+    ["Also / Too", "Yě", "也"],
+    ["To study / To learn", "Xuéxí", "学习"],
+    ["What", "Shénme", "什么"],
+    ["Pronounce", "Fāyīn", "发音"],
+    ["Chinese character", "Hànzì", "汉字"]
   ]
 ]
