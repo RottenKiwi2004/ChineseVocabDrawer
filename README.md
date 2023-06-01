@@ -30,7 +30,7 @@ _Next, go to http://localhost:3000_
 
 If the server is running properly, the program should show up on website.
 
-# To customise this for personal use
+## To customise this for personal use
 
 You can edit data.json and script.js
 
