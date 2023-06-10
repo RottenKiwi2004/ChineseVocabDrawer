@@ -6,6 +6,8 @@
 :root {
     --bg-colour: #1c1e22;
     --bg-canvas: #21262e;
+    --bg-button: #383f4d6a;
+    --outline-button: #576685;
 }
 
 body {
@@ -39,10 +41,18 @@ body {
     width: inherit;
 }
 
-.gui > button {
+button {
     padding: 10px;
     font-weight: 900;
     font-size: 1.5vh;
+    background: var(--bg-button);
+    color: #fff;
+    border: 1px var(--outline-button) solid;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }
 
 

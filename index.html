@@ -14,10 +14,12 @@
             <h2>Chinese: </h5><p id="chinese"></p>
             <h3>Stroke Size:</h3>
             <input id="strokeSize" type="range" min="2" max="10" value="5" onchange="changeStrokeSize(this.value)">
-            <button onclick="clearCanvas()">Clear Canvas (E)</button>
-            <button onclick="togglePinyin()">Toggle Pinyin (S)</button>
-            <button onclick="toggleChinese()">Toggle Chinese (D)</button>
-            <button onclick="nextWord()">Next Word (F)</button>
+            <div class="buttons">
+              <button onclick="clearCanvas()">Clear Canvas (E)</button>
+              <button onclick="togglePinyin()">Toggle Pinyin (S)</button>
+              <button onclick="toggleChinese()">Toggle Chinese (D)</button>
+              <button onclick="nextWord()">Next Word (F)</button>
+            </div>
             <h3>Chapters</h3>
             <div class="selector">
               <input type="checkbox" name="ch1" width="20px" checked onchange="encodeChapters(1, this.checked)"><label for="ch1">1</label>
