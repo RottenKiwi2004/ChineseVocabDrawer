@@ -13,19 +13,22 @@
             <h2>Pinyin: </h5><p id="pinyin"></p>
             <h2>Chinese: </h5><p id="chinese"></p>
             <h3>Stroke Size:</h3>
-            <input id="strokeSize" type="range" min="5" max="15" value="10" onchange="changeStrokeSize(this.value)">
+            <input id="strokeSize" type="range" min="2" max="10" value="5" onchange="changeStrokeSize(this.value)">
             <button onclick="clearCanvas()">Clear Canvas (E)</button>
             <button onclick="togglePinyin()">Toggle Pinyin (S)</button>
             <button onclick="toggleChinese()">Toggle Chinese (D)</button>
             <button onclick="nextWord()">Next Word (F)</button>
             <h3>Chapters</h3>
-            <div class="chapters">
+            <div class="selector">
               <input type="checkbox" name="ch1" width="20px" checked onchange="encodeChapters(1, this.checked)"><label for="ch1">1</label>
               <input type="checkbox" name="ch2" width="20px" checked onchange="encodeChapters(2, this.checked)"><label for="ch2">2</label>
               <input type="checkbox" name="ch3" width="20px" checked onchange="encodeChapters(3, this.checked)"><label for="ch3">3</label>
               <input type="checkbox" name="ch4" width="20px" checked onchange="encodeChapters(4, this.checked)"><label for="ch4">4</label>
               <input type="checkbox" name="ch5" width="20px" checked onchange="encodeChapters(5, this.checked)"><label for="ch5">5</label>
               <input type="checkbox" name="ch6" width="20px" checked onchange="encodeChapters(6, this.checked)"><label for="ch6">6</label>
+            </div>
+            <div class="selector">  
+              <input type="checkbox" name="random" id="random" checked onchange="randomiseList(this.checked)"><label for="random">Randomise Word</label>
             </div>
         </div>
     </div>

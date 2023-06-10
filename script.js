@@ -11,6 +11,8 @@ let currentWord, currentPinyin, currentChinese;
 let showPinyin = false,
   showChinese = false;
 
+let sequential = false;
+
 adjustCanvasSize();
 clearCanvas();
 
@@ -105,9 +107,13 @@ function encodeChapters(chapter, state) {
   if (code == 0) code = (1 << totalChapter) - 1;
 }
 
+function randomiseList(isRandom) {
+  sequential = !isRandom;
+}
+
 function nextWord() {
   console.log(code);
-  fetch(`/vocab?code=${code}`)
+  fetch(`/vocab?code=${code}${sequential ? "" : "&randomise=true"}`)
     .then((res) => res.json())
     .then((data) => {
       currentWord = data[0];

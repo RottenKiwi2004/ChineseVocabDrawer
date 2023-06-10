@@ -4,6 +4,10 @@ const app = express();
 const data = require("./data.json");
 const path = require("path");
 
+let vocabArr = [];
+let lastWord = 0;
+let chapterCode = (1 << data.length) - 1;
+
 function decodeChapters(input) {
   let arr = [];
   while (input > 0) {
@@ -16,15 +20,32 @@ function decodeChapters(input) {
 // GET request handler
 app.get("/vocab", (req, res) => {
   const queryParam = req.query.code;
+  const randomise = req.query.randomise == "true";
 
-  let chapters = decodeChapters(Number(req.query.code));
+  console.log(req.query);
 
-  let vocabArr = [];
+  let newChapterCode = Number(req.query.code);
+  let chapters = decodeChapters(newChapterCode);
 
-  for (let ch in chapters)
-    if (chapters[ch]) for (word of data[ch]) vocabArr.unshift(word);
+  if (newChapterCode != chapterCode) {
+    chapterCode = newChapterCode;
+    console.log(`Chapter code changed to ${chapterCode}`);
+    vocabArr = [];
 
-  var item = vocabArr[Math.floor(Math.random() * vocabArr.length)];
+    for (let ch in chapters)
+      if (chapters[ch]) for (word of data[ch]) vocabArr.unshift(word);
+  }
+  let total = vocabArr.length - 1;
+  var item;
+  if (randomise) {
+    let num = Math.floor(Math.random() * vocabArr.length);
+    item = vocabArr[num];
+    console.log(`${num} / ${total}`);
+  } else {
+    console.log(`${lastWord} / ${total}`);
+    item = vocabArr[lastWord++];
+    lastWord %= total;
+  }
 
   res.send(item);
 });
