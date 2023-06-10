@@ -104,6 +104,25 @@
     ["To study / To learn", "Xuéxí", "学习"],
     ["What", "Shénme", "什么"],
     ["Pronounce", "Fāyīn", "发音"],
-    ["Chinese character", "Hànzì", "汉字"]
+    ["Chinese character", "Hànzì", "汉字"],
+    ["Book", "Shū", "书"],
+    ["Who?", "Shéi/Shuí", "谁"],
+    ["A particle used after an attribute to indicate possession", "De", "的"],
+    ["That", "Nà", "那"],
+    ["Magazine", "Zázhì", "杂志"],
+    ["Chinese (Language)", "Zhōngwén", "中文"],
+    ["German (Language)", "Déwén", "德文"],
+    ["French (Language)", "Fǎwén", "法文"],
+    ["Korean (Language)", "Hánwén", "韩文"],
+    ["Japanese (Language)", "Rìwén", "日文"],
+    ["English (Language)", "Yīngwén", "英文"],
+    ["Friend (Language)", "Péngyǒu", "朋友"],
+    ["China (Country)", "Zhōngguó", "中国"],
+    ["Germany (Country)", "Déguó", "德国"],
+    ["France (Country)", "Fǎguó", "法国"],
+    ["The Republic of Korea (Country)", "Hánguó", "韩国"],
+    ["The United States (Country)", "Měiguó", "美国"],
+    ["Japan (Country)", "Rìběnguó", "日本国"],
+    ["The United Kingdom (Country)", "Yīngguó", "英国"]
   ]
 ]
