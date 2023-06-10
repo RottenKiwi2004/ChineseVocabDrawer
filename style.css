@@ -33,7 +33,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1.5vh; 
-    font-size: 40px;
+    font-size: 20px;
     color: #fff;
     height: 100vh;
     width: inherit;

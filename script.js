@@ -177,3 +177,33 @@ function handleTouchStart(event) {
 function handleTouchMove(event) {
   event.preventDefault();
 }
+
+function enterFullscreen() {
+  var element = document.documentElement; // Get the root element of the document
+
+  if (element.requestFullscreen) {
+    element.requestFullscreen(); // Standard syntax
+  } else if (element.mozRequestFullScreen) {
+    element.mozRequestFullScreen(); // Firefox
+  } else if (element.webkitRequestFullscreen) {
+    element.webkitRequestFullscreen(); // Chrome, Safari, and Opera
+  } else if (element.msRequestFullscreen) {
+    element.msRequestFullscreen(); // Internet Explorer and Edge
+  }
+}
+
+function exitFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen(); // Standard syntax
+  } else if (document.mozCancelFullScreen) {
+    document.mozCancelFullScreen(); // Firefox
+  } else if (document.webkitExitFullscreen) {
+    document.webkitExitFullscreen(); // Chrome, Safari, and Opera
+  } else if (document.msExitFullscreen) {
+    document.msExitFullscreen(); // Internet Explorer and Edge
+  }
+}
+
+function fullScreen(isFullscreen) {
+  isFullscreen ? enterFullscreen() : exitFullscreen();
+}
