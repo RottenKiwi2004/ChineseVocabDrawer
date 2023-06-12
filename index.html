@@ -13,7 +13,7 @@
             <h2>Pinyin: </h5><p id="pinyin"></p>
             <h2>Chinese: </h5><p id="chinese"></p>
             <h3>Stroke Size:</h3>
-            <input id="strokeSize" type="range" min="2" max="10" value="5" onchange="changeStrokeSize(this.value)">
+            <input id="strokeSize" type="range" min="2" max="10" value="5" step="0.1" onchange="changeStrokeSize(this.value)">
             <div class="buttons">
               <button onclick="clearCanvas()">Clear Canvas (E)</button>
               <button onclick="togglePinyin()">Toggle Pinyin (S)</button>
