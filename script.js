@@ -5,7 +5,7 @@ const canvas = document.getElementById("canvas");
 const context = canvas.getContext("2d");
 
 // Request code for vocab
-const totalChapter = 6;
+const totalChapter = 8;
 let code = (1 << totalChapter) - 1;
 let currentWord, currentPinyin, currentChinese;
 let showPinyin = false,

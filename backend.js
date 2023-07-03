@@ -33,9 +33,9 @@ app.get("/vocab", (req, res) => {
     vocabArr = [];
 
     for (let ch in chapters)
-      if (chapters[ch]) for (word of data[ch]) vocabArr.unshift(word);
+      if (chapters[ch]) for (word of data[ch]) vocabArr.push(word);
   }
-  let total = vocabArr.length - 1;
+  let total = vocabArr.length;
   var item;
   if (randomise) {
     let num = Math.floor(Math.random() * vocabArr.length);
